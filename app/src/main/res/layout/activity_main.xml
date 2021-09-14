@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/act">
+
+    <TextView
+        android:id="@+id/tl"
+        android:layout_width="@dimen/length"
+        android:layout_height="@dimen/length"
+        android:text="0"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:tag="topleft"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tr"
+        android:layout_width="@dimen/length"
+        android:layout_height="@dimen/length"
+        android:text="0"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:tag="topright"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/bl"
+        android:layout_width="@dimen/length"
+        android:layout_height="@dimen/length"
+        android:text="0"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:tag="bottomleft"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <TextView
+        android:id="@+id/br"
+        android:layout_width="@dimen/length"
+        android:layout_height="@dimen/length"
+        android:text="0"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:tag="bottomright"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:min="1"
+        android:max="50"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <Switch
+        android:id="@+id/s"
+        android:onClick="setSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/seekbar"
+        app:layout_constraintRight_toRightOf="@+id/seekbar"
+        app:layout_constraintLeft_toLeftOf="@+id/seekbar"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
